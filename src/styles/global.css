@@ -1,0 +1,178 @@
+/* ========================= */
+/* NAVBAR MAIN */
+/* ========================= */
+.navbar {
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+/* CONTAINER */
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LEFT */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0a66c2;
+}
+
+.logo span {
+  color: black;
+}
+
+/* RIGHT */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* BUTTONS */
+.nav-right button {
+  margin-left: 20px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* HOVER */
+.nav-right button:hover {
+  color: #0a66c2;
+}
+
+/* UNDERLINE EFFECT */
+.nav-right button::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #0a66c2;
+  transition: 0.3s;
+}
+
+.nav-right button:hover::after {
+  width: 100%;
+}
+
+/* ACTIVE TAB */
+.nav-right button.active {
+  color: #0a66c2;
+  font-weight: bold;
+}
+
+.nav-right button.active::after {
+  width: 100%;
+}
+
+/* ========================= */
+/* 🔔 NOTIFICATIONS */
+/* ========================= */
+
+.notif-container {
+  position: relative;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* BELL */
+.notif-container span {
+  font-size: 18px;
+}
+
+/* BADGE */
+.notif-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 4px 7px;
+  border-radius: 50%;
+}
+
+/* DROPDOWN */
+.notif-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 280px;
+
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+
+  padding: 10px;
+  z-index: 100;
+
+  max-height: 300px;
+  overflow-y: auto;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.2s;
+}
+
+/* SHOW ON HOVER */
+.notif-container:hover .notif-dropdown {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* EACH NOTIFICATION */
+.notif-item {
+  padding: 12px;
+  margin-bottom: 8px;
+
+  border-radius: 8px;
+  border: 1px solid #eee;
+
+  background: #fafafa;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+/* REMOVE EXTRA SPACE */
+.notif-item:last-child {
+  margin-bottom: 0;
+}
+
+/* HOVER */
+.notif-item:hover {
+  background: #f1f5f9;
+  border-color: #dbeafe;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+.danger-btn {
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,147 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.profile-card {
+  background: white;
+  width: 600px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.profile-card h2 {
+  margin-bottom: 5px;
+  color: #0a66c2;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* ACCESSIBILITY */
+.profile-card label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* INPUTS */
+.profile-card input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* BUTTON */
+.primary-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  background: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: #004182;
+}
+/* SELECT STYLE */
+.profile-card select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.jobs-container {
+  padding: 40px;
+}
+
+.jobs-header h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.jobs-header p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* SEARCH */
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.search-box input,
+.search-box select {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.search-box input {
+  flex: 1;
+}
+
+/* JOB CARDS */
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.job-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.job-card h3 {
+  margin-bottom: 5px;
+}
+
+.job-card p {
+  color: #555;
+}
+
+.job-type {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  background: #e3f2fd;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.apply-btn {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.apply-btn:hover {
+  background: #004182;
+}
+
+.no-jobs {
+  color: #888;
+}
