@@ -18,6 +18,7 @@ function Sidebar({ setPage, role }) {
           <button onClick={() => setPage("dashboard")}>Dashboard</button>
           <button onClick={() => setPage("post")}>Post Job</button>
           <button onClick={() => setPage("applicants")}>Applicants</button>
+          <button onClick={() => setPage("applicants")}>Applicants</button>
         </>
       )}
 

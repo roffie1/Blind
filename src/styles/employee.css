@@ -9,7 +9,7 @@
   width: 600px;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .profile-card h2 {
@@ -22,7 +22,6 @@
   color: #555;
 }
 
-/* ACCESSIBILITY */
 .profile-card label {
   display: block;
   margin-top: 15px;
@@ -30,40 +29,69 @@
   font-weight: bold;
 }
 
-/* INPUTS */
-.profile-card input {
-  width: 100%;
-  padding: 14px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-/* BUTTON */
-.primary-btn {
-  margin-top: 20px;
-  width: 100%;
-  padding: 14px;
-  background: #0a66c2;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.primary-btn:hover {
-  background: #004182;
-}
-/* SELECT STYLE */
+.profile-card input,
 .profile-card select {
   width: 100%;
   padding: 14px;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 16px;
-  margin-bottom: 10px;
+  box-sizing: border-box;
 }
+
+/* SAVED BANNER */
+.saved-banner {
+  background-color: #e6f4ea;
+  color: #2d7a3a;
+  border: 1px solid #a8d5b0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* BUTTONS */
+.btn-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-group .secondary-btn,
+.btn-group .primary-btn {
+  flex: 1;
+  height: 52px;
+  padding: 0;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.btn-group .secondary-btn {
+  background-color: #ffffff;
+  color: #0a66c2;
+  border: 2px solid #0a66c2;
+}
+
+.btn-group .secondary-btn:hover {
+  background-color: #e8f0fe;
+}
+
+.btn-group .primary-btn {
+  background-color: #0a66c2;
+  color: #ffffff;
+  border: 2px solid #0a66c2;
+}
+
+.btn-group .primary-btn:hover {
+  background-color: #004182;
+  border-color: #004182;
+}
+
+/* JOBS PAGE */
 .jobs-container {
   padding: 40px;
 }
@@ -78,7 +106,6 @@
   margin-bottom: 20px;
 }
 
-/* SEARCH */
 .search-box {
   display: flex;
   gap: 10px;
@@ -97,7 +124,6 @@
   flex: 1;
 }
 
-/* JOB CARDS */
 .job-list {
   display: flex;
   flex-direction: column;
@@ -108,7 +134,7 @@
   background: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .job-card h3 {

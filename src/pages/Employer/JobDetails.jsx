@@ -18,6 +18,15 @@ function JobDetails({ job, setPage }) {
     });
   };
 
+  // ✅ FORMAT SALARY
+  const formatSalary = () => {
+    if (!editedJob.salary) return "Not specified";
+
+    return editedJob.currency === "PHP"
+      ? `₱${editedJob.salary}`
+      : `$${editedJob.salary}`;
+  };
+
   return (
     <div className="employer-dashboard">
 
@@ -35,6 +44,16 @@ function JobDetails({ job, setPage }) {
 
             <h2>Edit Job</h2>
 
+            {/* COMPANY */}
+            <div className="form-group">
+              <label>Company Name</label>
+              <input
+                name="company"
+                value={editedJob.company || ""}
+                onChange={handleChange}
+              />
+            </div>
+
             {/* TITLE */}
             <div className="form-group">
               <label>Job Title</label>
@@ -43,6 +62,28 @@ function JobDetails({ job, setPage }) {
                 value={editedJob.title}
                 onChange={handleChange}
               />
+            </div>
+
+            {/* SALARY */}
+            <div className="form-group">
+              <label>Salary</label>
+              <div className="salary-input">
+                <select
+                  name="currency"
+                  value={editedJob.currency || "PHP"}
+                  onChange={handleChange}
+                >
+                  <option value="PHP">₱ PHP</option>
+                  <option value="USD">$ USD</option>
+                </select>
+
+                <input
+                  type="number"
+                  name="salary"
+                  value={editedJob.salary || ""}
+                  onChange={handleChange}
+                />
+              </div>
             </div>
 
             {/* TYPE */}
@@ -104,6 +145,10 @@ function JobDetails({ job, setPage }) {
         ) : (
           <>
             <h2>{editedJob.title}</h2>
+
+            {/* ✅ NEW FIELDS DISPLAYED */}
+            <p><strong>Company:</strong> {editedJob.company || "N/A"}</p>
+            <p><strong>Salary:</strong> {formatSalary()}</p>
 
             <p><strong>Type:</strong> {editedJob.type}</p>
             <p><strong>Experience:</strong> {editedJob.experience}</p>
